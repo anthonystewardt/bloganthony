@@ -8,7 +8,25 @@ class PostController extends Controller
 {
     public function index()
     {
-        return "Posts";
+        $posts = [
+            [
+                "title" => "Post 1",
+                "content" => "Este es el contenido del Post 1"
+            ],
+            [
+                "title" => "Post 2",
+                "content" => "Este es el contenido del Post 2"
+            ],
+            [
+                "title" => "Post 3",
+                "content" => "Este es el contenido del Post 3"
+            ]
+        ];
+
+        $value = 123;
+        $value_empty = null;
+
+        return view('posts.index', compact('posts', 'value', 'value_empty'));
     }
 
     public function store()

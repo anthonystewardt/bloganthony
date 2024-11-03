@@ -1,6 +1,4 @@
-version: "3.1"
-
-#create a container with mysql image
+version: "3.0"
 
 services:
   blog:
@@ -18,3 +16,7 @@ services:
       - ./mysql:/var/lib/mysql
     networks:
       - mynet
+
+networks:
+  mynet:
+    driver: bridge
